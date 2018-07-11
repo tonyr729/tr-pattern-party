@@ -1,0 +1,94 @@
+html {
+  font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background: #fff;
+  height: 100vh;
+	box-sizing: border-box;
+	padding-top: 10vh;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.accordion {
+	display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  label {
+    order: 1;
+    display: block;
+    padding: 1rem 2rem;
+    margin-right: 0.2rem;
+    cursor: pointer;
+    background: #f2f2f2;
+    color: #999;
+    padding: 1rem 7rem;
+  }
+  .accordion__tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+    border: .2rem solid #999;
+    position: relative;
+    bottom: .2rem;
+    img {
+      width: 40%;
+    }
+    .tab__text {
+      display: inline-block;
+      width: 50%;
+      margin-left: 3rem;
+      vertical-align: top;
+    }
+    .tab__text-title {
+      font-weight: bold;
+    }
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked + label {
+    background: #fff;
+    border: .2rem solid #999;
+    border-bottom: none;
+    color: #000;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+  }
+  input[type="radio"]:checked + label + .accordion__tab {
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .accordion {
+    font-size: initial;
+    .accordion__tab {
+      padding: 0;
+      .tab__text {
+        width: 90%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .accordion .accordion__tab,
+  .accordion label {
+    order: initial;
+  }
+
+  .accordion label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
