@@ -20,4 +20,13 @@ document.getElementById('btn__show-accordion').addEventListener("click", functio
     document.getElementById('flex-cards').classList.add('hidden')
     document.getElementById('headers').classList.add('hidden')
   });
+  
+  document.getElementById('header-closed').addEventListener("click", function(event) {
+    document.getElementById('header-closed').classList.toggle('hidden')
+    document.getElementById('header-opened').classList.toggle('hidden')
+  });
 
+  document.getElementById('header-opened').addEventListener("click", function(event) {
+    document.getElementById('header-closed').classList.toggle('hidden')
+    document.getElementById('header-opened').classList.toggle('hidden')
+  });
