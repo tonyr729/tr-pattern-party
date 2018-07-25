@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/tonyr729/tr-pattern-party#readme",
   "dependencies": {
-    "sass": "^1.9.0"
+    "sass": "^1.9.0",
+    "surge": "^0.20.1"
   },
   "devDependencies": {
     "node-sass": "^4.9.2",
