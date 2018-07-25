@@ -3,17 +3,71 @@ html {
   font-family: 'Open Sans', sans-serif; }
 
 body {
-  background: #fff;
+  background: #262626;
   height: 100vh;
   box-sizing: border-box;
-  padding-top: 10vh;
-  max-width: 80vw;
   margin: 0 auto; }
+
+header {
+  background-color: #2f2235; }
+  header p {
+    margin: 0 2rem;
+    padding: 1.2rem;
+    font-size: 2rem;
+    display: inline-block;
+    color: #fff; }
+    header p span {
+      color: #31d1d1; }
+  header .header__name {
+    float: right; }
+
+a {
+  text-decoration: none; }
+
+.hidden {
+  display: none; }
+
+.btn__view-code {
+  margin: 10rem auto 10rem;
+  display: block;
+  border: none;
+  background: #2f2235;
+  width: 20%;
+  height: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 200; }
+
+.article__main {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  height: 1000rem; }
+
+.section__title {
+  width: 95%;
+  margin: 0 auto; }
+  .section__title p {
+    font-size: 2rem;
+    display: inline-block; }
+  .section__title hr {
+    display: inline-block;
+    width: 80%;
+    margin-left: 2rem;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc; }
+
+.section__accordion {
+  width: 100%;
+  padding-top: 5rem; }
 
 .accordion {
   display: flex;
   flex-wrap: wrap;
-  font-size: 1.5rem; }
+  font-size: 2rem;
+  width: 80%;
+  margin: 5rem auto; }
   .accordion label {
     order: 1;
     display: block;
@@ -21,8 +75,9 @@ body {
     margin-right: 0.2rem;
     cursor: pointer;
     background: #f2f2f2;
-    color: #999;
-    padding: 1rem 7rem; }
+    color: #e6e6e6;
+    padding: 1rem 5rem;
+    text-align: center; }
   .accordion .accordion__tab {
     order: 99;
     flex-grow: 1;
@@ -30,11 +85,12 @@ body {
     display: none;
     padding: 1rem;
     background: #fff;
-    border: .2rem solid #999;
+    border: 0.2rem solid #e6e6e6;
     position: relative;
     bottom: .2rem; }
     .accordion .accordion__tab img {
-      width: 40%; }
+      width: 40%;
+      padding: 2rem; }
     .accordion .accordion__tab .tab__text {
       display: inline-block;
       width: 50%;
@@ -46,14 +102,69 @@ body {
     display: none; }
   .accordion input[type="radio"]:checked + label {
     background: #fff;
-    border: .2rem solid #999;
+    border: 0.2rem solid #e6e6e6;
     border-bottom: none;
-    color: #000;
+    color: #262626;
     font-weight: bold;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    text-align: center; }
   .accordion input[type="radio"]:checked + label + .accordion__tab {
     display: block; }
+
+.code-model {
+  width: 100vw;
+  height: 1000rem;
+  background: #000000ad;
+  position: absolute;
+  top: 0;
+  z-index: 100; }
+  .code-model .accordion__code-display {
+    width: 80vw;
+    position: fixed;
+    top: 10%;
+    left: 10%; }
+
+.section__flex-cards {
+  width: 80vw;
+  height: 100rem;
+  margin: 5rem auto; }
+  .section__flex-cards .grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card1 card2" "card3 card4 card5" "card6 card7 card7"; }
+  .section__flex-cards .card1, .section__flex-cards .card2, .section__flex-cards .card3, .section__flex-cards .card4,
+  .section__flex-cards .card5, .section__flex-cards .card6, .section__flex-cards .card7 {
+    border: 0.2rem solid #e6e6e6;
+    margin: 1rem;
+    background: #f2f2f2;
+    background-image: url("../images/no_img.png"); }
+    .section__flex-cards .card1 p, .section__flex-cards .card2 p, .section__flex-cards .card3 p, .section__flex-cards .card4 p,
+    .section__flex-cards .card5 p, .section__flex-cards .card6 p, .section__flex-cards .card7 p {
+      font-size: 2rem;
+      background: white;
+      padding: 2rem 1rem;
+      margin-top: 0;
+      font-weight: bold; }
+  .section__flex-cards .card-img {
+    width: 100%;
+    height: 27.4rem; }
+  .section__flex-cards .card1 {
+    grid-area: card1; }
+  .section__flex-cards .card2 {
+    grid-area: card2; }
+  .section__flex-cards .card3 {
+    grid-area: card3; }
+  .section__flex-cards .card4 {
+    grid-area: card4; }
+  .section__flex-cards .card5 {
+    grid-area: card5; }
+  .section__flex-cards .card6 {
+    grid-area: card6; }
+  .section__flex-cards .card7 {
+    grid-area: card7; }
 
 @media screen and (max-width: 600px) {
   .accordion {
@@ -63,7 +174,7 @@ body {
       .accordion .accordion__tab .tab__text {
         width: 90%; }
       .accordion .accordion__tab img {
-        width: 100%; }
+        width: 90%; }
   .accordion .accordion__tab,
   .accordion label {
     order: initial; }

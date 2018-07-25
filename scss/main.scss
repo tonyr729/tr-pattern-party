@@ -1,30 +1,111 @@
+$white: #fff;
+$darkgrey: #262626;
+$bordergrey: #e6e6e6;
+$lightgrey: #f2f2f2;
+$darkpurple: #2f2235;
+$lightblue: #31d1d1;
+
+
 html {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  background: #fff;
+  background: $darkgrey;
   height: 100vh;
 	box-sizing: border-box;
-	padding-top: 10vh;
-  max-width: 80vw;
   margin: 0 auto;
+}
+
+header {
+  background-color: $darkpurple;
+
+  p {
+    margin: 0 2rem;
+    padding: 1.2rem;
+    font-size: 2rem;
+    display: inline-block;
+    color: $white;
+
+    span {
+      color: $lightblue;
+    }
+  }
+
+  .header__name {
+    float: right;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn__view-code{
+  margin: 10rem auto 10rem;
+  display: block;
+  border: none;
+  background: $darkpurple;
+  width: 20%;
+  height: 5rem;
+  font-size: 2rem;
+  color: $white;
+  font-weight: 200;
+}
+
+.article__main {
+  width: 100%;
+  margin: 0 auto;
+  background: $white;
+  height: 1000rem;
+}
+
+.section__title {
+  width: 95%;
+  margin: 0 auto;
+
+  p {
+    font-size: 2rem;
+    display: inline-block;
+  }
+
+  hr {
+    display: inline-block;
+    width: 80%;
+    margin-left: 2rem;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+}
+
+.section__accordion {
+  width: 100%;
+  padding-top: 5rem;
 }
 
 .accordion {
 	display: flex;
   flex-wrap: wrap;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  width: 80%;
+  margin: 5rem auto;
+
   label {
     order: 1;
     display: block;
     padding: 1rem 2rem;
     margin-right: 0.2rem;
     cursor: pointer;
-    background: #f2f2f2;
-    color: #999;
-    padding: 1rem 7rem;
+    background: $lightgrey;
+    color: $bordergrey;
+    padding: 1rem 5rem;
+    text-align: center
   }
   .accordion__tab {
     order: 99;
@@ -32,37 +113,123 @@ body {
     width: 100%;
     display: none;
     padding: 1rem;
-    background: #fff;
-    border: .2rem solid #999;
+    background: $white;
+    border: .2rem solid $bordergrey;
     position: relative;
     bottom: .2rem;
+
     img {
       width: 40%;
+      padding: 2rem;
     }
+
     .tab__text {
       display: inline-block;
       width: 50%;
       margin-left: 3rem;
       vertical-align: top;
     }
+
     .tab__text-title {
       font-weight: bold;
     }
   }
+
   input[type="radio"] {
     display: none;
   }
+
   input[type="radio"]:checked + label {
-    background: #fff;
-    border: .2rem solid #999;
+    background: $white;
+    border: .2rem solid $bordergrey;
     border-bottom: none;
-    color: #000;
+    color: $darkgrey;
     font-weight: bold;
     position: relative;
     z-index: 1;
+    text-align: center;
   }
+
   input[type="radio"]:checked + label + .accordion__tab {
     display: block;
+  }
+}
+
+.code-model {
+  width: 100vw;
+  height: 1000rem;
+  background:#000000ad;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+  .accordion__code-display {
+    width: 80vw;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+  }
+}
+
+.section__flex-cards {
+  width: 80vw;
+  height: 100rem;
+  margin: 5rem auto;
+
+  .grid-container {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "card1 card1 card2" "card3 card4 card5" "card6 card7 card7";
+  }
+
+  .card1, .card2, .card3, .card4,
+  .card5, .card6, .card7 {
+    border: 0.2rem solid #e6e6e6;
+    margin: 1rem;
+    background: #f2f2f2;
+    background-image: url('../images/no_img.png');
+    p {
+      font-size: 2rem;
+      background: white;
+      padding: 2rem 1rem;
+      margin-top: 0;
+      font-weight: bold;
+    }
+  }
+
+  .card-img {
+    width: 100%;
+    height: 27.4rem;
+  }
+  
+  .card1 {
+    grid-area: card1;
+  }
+  
+  .card2 {
+    grid-area: card2;
+  }
+  
+  .card3 {
+    grid-area: card3;
+  }
+  
+  .card4 {
+    grid-area: card4;
+  }
+  
+  .card5 {
+    grid-area: card5;
+  }
+  
+  .card6 {
+    grid-area: card6;
+  }
+  
+  .card7 {
+    grid-area: card7;
   }
 }
 
@@ -76,7 +243,7 @@ body {
         width: 90%;
       }
       img {
-        width: 100%;
+        width: 90%;
       }
     }
   }
