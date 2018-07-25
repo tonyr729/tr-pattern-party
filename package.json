@@ -1,0 +1,29 @@
+{
+  "name": "tr-pattern-party",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/main.scss   public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyr729/tr-pattern-party.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tonyr729/tr-pattern-party/issues"
+  },
+  "homepage": "https://github.com/tonyr729/tr-pattern-party#readme",
+  "dependencies": {
+    "sass": "^1.9.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "nodemon": "^1.18.0"
+  }
+}
