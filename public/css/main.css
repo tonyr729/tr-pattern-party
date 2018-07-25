@@ -76,7 +76,8 @@ a {
     cursor: pointer;
     background: #f2f2f2;
     color: #e6e6e6;
-    padding: 1rem 5rem;
+    padding: 1rem;
+    width: 18.75vw;
     text-align: center; }
   .accordion .accordion__tab {
     order: 99;
@@ -168,9 +169,6 @@ a {
     grid-area: card6; }
   .section__flex-cards .card7 {
     grid-area: card7; }
-
-.section__header-closed {
-  display: none; }
 
 .section__header-bar .div__header-bar,
 .section__header-closed .div__header-bar {
@@ -294,7 +292,7 @@ a {
       height: 9rem;
       justify-content: space-around;
       flex-direction: column;
-      margin: 8rem auto;
+      margin: 0 auto;
       width: 30rem; }
       .section__header-bar .div__header-bar .mobil-menu,
       .section__header-closed .div__header-bar .mobil-menu {
@@ -324,7 +322,6 @@ a {
           top: 0;
           right: 4rem; }
   .section__header-closed {
-    display: inherit;
     height: 9rem; }
     .section__header-closed .div__header-bar .mobil-menu {
       top: 1.2rem; }

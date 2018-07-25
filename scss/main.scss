@@ -104,7 +104,8 @@ a {
     cursor: pointer;
     background: $lightgrey;
     color: $bordergrey;
-    padding: 1rem 5rem;
+    padding: 1rem;
+    width: 18.75vw;
     text-align: center
   }
   .accordion__tab {
@@ -234,10 +235,6 @@ a {
   .card7 {
     grid-area: card7;
   }
-}
-
-.section__header-closed {
-  display: none;
 }
 
 .section__header-bar, 
@@ -423,7 +420,7 @@ a {
       height: 9rem;
       justify-content: space-around;
       flex-direction: column;
-      margin: 8rem auto;
+      margin: 0 auto;
       width: 30rem;
 
       .mobil-menu {
@@ -460,7 +457,6 @@ a {
   }
 
   .section__header-closed {
-    display: inherit;
     height: 9rem;
 
     .div__header-bar {
